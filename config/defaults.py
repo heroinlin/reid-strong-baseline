@@ -49,9 +49,9 @@ _C.MODEL.IF_LABELSMOOTH = 'on'
 # -----------------------------------------------------------------------------
 _C.INPUT = CN()
 # Size of the image during training
-_C.INPUT.SIZE_TRAIN = [384, 128]
+_C.INPUT.SIZE_TRAIN = [144, 144]
 # Size of the image during test
-_C.INPUT.SIZE_TEST = [384, 128]
+_C.INPUT.SIZE_TEST = [144, 144]
 # Random probability for image horizontal flip
 _C.INPUT.PROB = 0.5
 # Random probability for random erasing
@@ -68,7 +68,7 @@ _C.INPUT.PADDING = 10
 # -----------------------------------------------------------------------------
 _C.DATASETS = CN()
 # List of the dataset names for training, as present in paths_catalog.py
-_C.DATASETS.NAMES = ('market1501')
+_C.DATASETS.NAMES = ('bus_id')
 # Root directory where datasets should be used (and downloaded if not found)
 _C.DATASETS.ROOT_DIR = ('./data')
 

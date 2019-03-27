@@ -1,6 +1,6 @@
 MODEL:
   PRETRAIN_CHOICE: 'imagenet'
-  PRETRAIN_PATH: '/home/haoluo/.torch/models/resnet50-19c8e357.pth'
+  PRETRAIN_PATH: 'F:/models/pytorch/resnet50-19c8e357.pth'
   LAST_STRIDE: 2
   NECK: 'no'
   METRIC_LOSS_TYPE: 'triplet'
@@ -9,14 +9,14 @@ MODEL:
 
 
 INPUT:
-  SIZE_TRAIN: [256, 128]
-  SIZE_TEST: [256, 128]
+  SIZE_TRAIN: [144, 144]
+  SIZE_TEST: [144, 144]
   PROB: 0.5 # random horizontal flip
   RE_PROB: 0.0 # random erasing
   PADDING: 10
 
 DATASETS:
-  NAMES: ('market1501')
+  NAMES: ('bus_id')
 
 DATALOADER:
   SAMPLER: 'softmax_triplet'
@@ -34,7 +34,7 @@ SOLVER:
   CENTER_LOSS_WEIGHT: 0.0005
 
   RANGE_K: 2
-  RANGE_MARGIN: 0.3
+  RANGE_MARGIN: 1.2
   RANGE_ALPHA: 0
   RANGE_BETA: 1
   RANGE_LOSS_WEIGHT: 1
@@ -62,6 +62,6 @@ TEST:
   NECK_FEAT: 'after'
   FEAT_NORM: 'yes'
 
-OUTPUT_DIR: "/home/haoluo/log/gu/reid_baseline_review/Opensource_test/market1501/Experiment-all-tricks-256x128-bs16x4-warmup10-erase0_5-labelsmooth_on-laststride1-bnneck_on"
+OUTPUT_DIR: "checkpoints/bus_id/Experiment-all-tricks"
 
 
